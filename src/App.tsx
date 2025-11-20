@@ -1,12 +1,11 @@
-import bdfcLogo from './assets/logo.jpg'
 import './App.css'
+import Header from './Components/Header'
 
 function App() {
 
   return (
     <>
-      <img src={bdfcLogo} className="logo react" alt="React logo" />
-      <h1>Bradford Disability Football Club</h1>
+      < Header />
     </>
   )
 }
