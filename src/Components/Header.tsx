@@ -1,4 +1,4 @@
-import bcfcNewLogo from '../assets/bcfc-temp-logo.svg'
+import bcfcNewLogo from '../assets/bcfc-temp-logo.png'
 import '../Styles/Header.css'
 import donateIcon from '../assets/donate-icon-temp-2.png'
 
