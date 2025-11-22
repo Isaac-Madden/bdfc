@@ -7,7 +7,7 @@
     align-items: center; 
     box-sizing: border-box;
     box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
-    padding: 3rem 2rem 1rem 2rem; 
+    padding: 2rem 0rem 1rem 0rem;
 }
 
 .Content {
@@ -15,7 +15,7 @@
     justify-content: space-around;
     width: 100%;
     max-width: 1200px; 
-    padding-bottom: 2rem; 
+    padding-bottom: 0.5rem; 
 }
 
 h3 {
@@ -72,30 +72,41 @@ a:hover {
     margin: 0; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 574px) {
     .Footer {
         padding: 2rem 1rem 1rem 1rem;
     }
 
+    p {
+        line-height: 1;
+    }
+
     .Content {
         flex-direction: column; 
-        gap: 2rem; 
-        padding-bottom: 2rem;
+        gap: 1rem; 
+        padding-bottom: 1rem;
         text-align: left;
     }
 
     .Contact {
-        padding-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
         border-bottom: 1px solid #eee;
     } /* adding a deviding line for mobile views between social and contact divs */
 
     .Footer h3 {
-        font-size: 1.3rem; 
+        font-size: 1.2rem; 
         margin-top: 0;
+        margin-bottom: 1rem;
     }
 
     .SocialIcons {
         justify-content: flex-start; 
+        gap: 0.5rem;
         margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .SocialIcons a {
+        font-size: 1rem;
     }
 }
