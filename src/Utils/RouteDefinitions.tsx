@@ -5,7 +5,6 @@ import AdultsPage from '../Pages/AdultsPage'
 import JuniorsPage from '../Pages/JuniorsPage'
 import GalleryPage from '../Pages/GalleryPage';
 import SponsorsPage from '../Pages/SponsorsPage';
-import SocialsPage from '../Pages/SocialsPage';
 import ContactPage from '../Pages/ContactPage';  
 import NewsletterPage from '../Pages/NewsletterPage';
 import PoliciesPage from '../Pages/PoliciesPage';
@@ -21,7 +20,6 @@ export const AppRoutes: AppRoute[] = [
     { path: '/juniors', element: <JuniorsPage /> },
     { path: '/gallery', element: <GalleryPage /> },
     { path: '/sponsors', element: <SponsorsPage /> },
-    { path: '/socials', element: <SocialsPage /> },
     { path: '/contact', element: <ContactPage /> },
     { path: '/newsletter', element: <NewsletterPage /> },
     { path: '/policies', element: <PoliciesPage /> },

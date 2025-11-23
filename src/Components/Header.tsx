@@ -11,8 +11,7 @@ const Header: React.FC = () => {
     <div className='Header'>
       <img src={bcfcNewLogo} alt="Bradford Disability Club Badge" className="logoIcon"/>
       <h1>Bradford Disability Football Club</h1>
-
-      <a 
+      <a
         className="HeaderDonate"
         href={donationLink}
         target="_blank"
@@ -20,7 +19,7 @@ const Header: React.FC = () => {
         >
         <img src={donateIcon} alt="Donate to Bradford Disability" className="donateIcon"/>
       </a>
-    </div>
+  </div>
   )
 }
 

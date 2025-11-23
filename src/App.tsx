@@ -5,7 +5,7 @@ import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Navbar from './Components/NavBar';
-import RouterConfig from './Components/RouterConfig';
+import RouterConfig from './Utils/RouterConfig';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         <RouterConfig />
       </main>
       <Footer />
-    </BrowserRouter> 
+    </BrowserRouter>
   )
 }
 

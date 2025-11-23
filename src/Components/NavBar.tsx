@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/NavBar.css'
+import '../Styles/NavBar.css'; // Make sure the path is correct
 
 interface NavLink {
     name: string;
@@ -8,24 +8,39 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-    { name: 'Home', url: '/' }, // incorp about section?
-    { name: 'Juniors', url: '/juniors' }, // incorp training? incorp match dates?
-    { name: 'Adults', url: '/adults' },  // incorp training? incorp match dates?
+    { name: 'Home', url: '/' },
+    { name: 'Juniors', url: '/juniors' },
+    { name: 'Adults', url: '/adults' },
     { name: 'Gallery', url: '/gallery' },
     { name: 'Sponsors', url: '/sponsors' },
-    { name: 'Socials', url: '/socials' },
     { name: 'Newsletter', url: '/newsletter' },
-    { name: 'Policies', url: '/policies' },  // incorp safefuarding?
+    { name: 'Policies', url: '/policies' },
     { name: 'Contact', url: '/contact' }
 ];
 
 const Navbar: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className="main-nav">
-            <ul className="nav-list">
+            <button className="hamburger-icon" onClick={toggleMenu} aria-expanded={isOpen} aria-label="Toggle navigation menu">
+                ☰
+            </button>
+
+            <ul className={`nav-list ${isOpen ? 'open' : ''}`}>
                 {navLinks.map((link) => (
                     <li key={link.name}>
-                        <Link to={link.url}>{link.name}</Link>
+                        <Link to={link.url} onClick={closeMenu}>
+                            {link.name}
+                        </Link>
                     </li>
                 ))}
             </ul>
