@@ -1,6 +1,11 @@
+import React from 'react';
+import '../Styles/PageStyles/AdultsPage.css';
+
 const AdultsPage: React.FC = () => {
   return (
-    <p>Hey i'm the adults page</p>
+    <div className="AdultsPage">   
+        <p>Hey i'm the AdultsPage</p>
+    </div>
   )
 }
 export default AdultsPage;

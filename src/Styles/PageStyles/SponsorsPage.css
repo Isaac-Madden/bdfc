@@ -1,0 +1,8 @@
+.SponsorsPage {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
+    margin-bottom: 1rem;
+}
