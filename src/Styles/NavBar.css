@@ -1,0 +1,120 @@
+.main-nav {
+    width: 100%;
+    background-color: white; 
+    box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
+    padding: 1rem 0; 
+    margin-bottom: 25px;
+    position: relative; 
+}
+
+.nav-list {
+    list-style: none; 
+    padding: 0;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 3rem;
+    font-family: sans-serif; 
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #6C3246;
+    font-size: 1.2rem;
+    font-weight: 600; 
+    transition: color 0.2s ease, border-bottom 0.2s ease; 
+    border-bottom: 3px solid transparent; 
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: #FFBF00; 
+    border-bottom: 3px solid #FFBF00; 
+    outline: none; 
+}
+
+@media (max-width: 990px) {
+    .nav-list {
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 15px 10px;
+        padding: 0 15px;
+    }
+
+    .nav-list a {
+        display: block; 
+        width: 100%; 
+        height: 100%;
+        padding: 10px 5px; 
+        box-sizing: border-box;
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 770px) {
+
+    .main-nav {
+        box-shadow: none;
+        background: none;
+        padding-top: 1rem; 
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger-icon {
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            gap: 0.5rem;      
+            color: #6C3246; 
+            cursor: pointer;
+            z-index: 1000;
+            border: none;
+            background-color: white;
+    }
+
+    .hamburger-icon .menu-icon-svg {
+        width: 1rem; 
+    }
+
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #6C3246; 
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        grid-template-columns: none;
+        gap: 0;
+        padding: 0;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 1rem;
+        color: white; 
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 771px) {
+    .hamburger-icon {
+        display: none;
+    }
+}
