@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/NavBar.css'; // Make sure the path is correct
-import menuSVG from '../Assets/menu.svg'; // Import the hamburger menu SVG  
+import menuSVG from '../assets/menu.svg'; // Import the hamburger menu SVG  
 
 interface NavLink {
     name: string;
