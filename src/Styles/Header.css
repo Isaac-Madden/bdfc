@@ -5,6 +5,7 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid #eee;
     background-color: white;
+    font-family: sans-serif;
     color: #6C3246;
     height: 8.5rem;
     box-sizing: border-box;
@@ -32,7 +33,7 @@
         padding: 0.5rem 1rem;
     }
     .Header h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     .Header .logoIcon {
         height: 5rem;

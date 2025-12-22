@@ -7,21 +7,18 @@
     align-items: center; 
     box-sizing: border-box;
     box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
-    padding: 2rem 0rem 1rem 0rem;
+    padding: 1rem 0rem;
 }
 
 .Content {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     max-width: 1200px; 
-    padding-bottom: 0.5rem; 
 }
 
 h3 {
     color: #6C3246; 
     font-size: 1.5rem; 
-    margin: 1rem 0 1.5rem 0; 
+    margin: 1rem 0rem; 
 }
 
 p {
@@ -41,14 +38,16 @@ a:hover {
 }
 
 .SocialIcons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem; 
-    margin-top: 1rem;
+    display: inline-flex;
+    gap: 1rem;
+    list-style: none;   /* reset of li default styles */
+    padding: 0;    /* reset of li default styles */
+    margin: 0;    /* reset of li default styles */
+    padding-bottom: 1rem;    
 }
 
 .SocialIcons a {
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     color: #6C3246;
 }
 
@@ -70,43 +69,4 @@ a:hover {
 
 .Copyright p {
     margin: 0; 
-}
-
-@media (max-width: 574px) {
-    .Footer {
-        padding: 2rem 1rem 1rem 1rem;
-    }
-
-    p {
-        line-height: 1;
-    }
-
-    .Content {
-        flex-direction: column; 
-        gap: 1rem; 
-        padding-bottom: 1rem;
-        text-align: left;
-    }
-
-    .Contact {
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid #eee;
-    } /* adding a deviding line for mobile views between social and contact divs */
-
-    .Footer h3 {
-        font-size: 1.2rem; 
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-
-    .SocialIcons {
-        justify-content: flex-start; 
-        gap: 0.5rem;
-        margin-left: 0;
-        font-size: 1rem;
-    }
-
-    .SocialIcons a {
-        font-size: 1rem;
-    }
 }
