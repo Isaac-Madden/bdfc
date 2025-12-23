@@ -39,8 +39,6 @@
 .nav-list a:hover,
 .nav-list a:focus {
     color: #FFBF00; 
-    border-bottom: 3px solid #FFBF00; 
-    outline: none; 
 }
 
 @media (max-width: 990px) {
@@ -80,16 +78,13 @@
             justify-content: center;
             gap: 0.5rem;      
             color: #6C3246; 
-            font-size: 1.2rem;
+            font-size: 1rem;
+            font-weight: bold;
             font-family: sans-serif; 
             cursor: pointer;
             z-index: 1000;
             border: none;
             background-color: white;
-    }
-
-    .hamburger-icon .menu-icon-svg {
-        width: 1.2rem; 
     }
 
     .nav-list {

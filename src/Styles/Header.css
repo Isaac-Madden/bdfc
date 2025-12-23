@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 1rem 2rem;
     border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
     background-color: white;
     font-family: sans-serif;
     color: #6C3246;
@@ -13,7 +14,7 @@
 }
 
 .Header .logoIcon {
-    height: 8.5rem;
+    height: 6.5rem;
 }
 
 .Header h1 {
@@ -36,7 +37,7 @@
         font-size: 1.5rem;
     }
     .Header .logoIcon {
-        height: 5rem;
+        height: 4rem;
     }
     .Header .donateIcon {
         height: 4rem;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/NavBar.css'; // Make sure the path is correct
-import menuSVG from '../assets/menu.svg'; // Import the hamburger menu SVG  
+import '../Styles/NavBar.css'; 
+import { FaBars } from 'react-icons/fa';
 
 interface NavLink {
     name: string;
@@ -35,7 +35,8 @@ const Navbar: React.FC = () => {
     return (
         <nav className="main-nav">
             <button className="hamburger-icon" onClick={toggleMenu} aria-expanded={isOpen} aria-label="Toggle navigation menu">
-                <img src={menuSVG} alt="Menu icon" className="menu-icon-svg" />
+                {/* <img src={menuSVG} alt="Menu icon" className="menu-icon-svg" /> */}
+                <FaBars aria-hidden="true" />
                 <span className="icon-text">MENU</span>
             </button>
 
