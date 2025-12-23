@@ -15,8 +15,8 @@ const navLinks: NavLink[] = [
     { name: 'Sponsorship and Donations', url: '/sponsors' },
     { name: 'Gallery', url: '/gallery' },
     { name: 'Newsletter', url: '/newsletter' },
-    { name: 'Policies', url: '/policies' },
     { name: 'Safeguarding and welfare', url: '/safeguarding' },
+    { name: 'Policies', url: '/policies' },
     { name: 'News', url: '/news' },
     { name: 'Tournaments', url: '/tournaments' },
 ];

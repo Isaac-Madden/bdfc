@@ -13,7 +13,10 @@ const Header: React.FC = () => {
       <Link to="/" className="homeLink" aria-label="Go to Bradford Disability Football Club homepage">
         <img src={bdfcLogo} alt="Bradford Disability Club Badge" className="logoIcon"/>
       </Link>
-      <h1>Bradford Disability Football Club</h1>
+      <div className='headerText'>
+        <h1>Bradford Disability Football Club</h1>
+        <p>Registered Charity: 1158017</p>
+      </div>
       <a
         className="HeaderDonate"
         href={donationLink}
