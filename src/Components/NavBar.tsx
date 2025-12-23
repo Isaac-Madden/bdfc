@@ -12,11 +12,13 @@ const navLinks: NavLink[] = [
     { name: 'Home', url: '/' },
     { name: 'Juniors', url: '/juniors' },
     { name: 'Adults', url: '/adults' },
+    { name: 'Sponsorship and Donations', url: '/sponsors' },
     { name: 'Gallery', url: '/gallery' },
-    { name: 'Sponsors', url: '/sponsors' },
     { name: 'Newsletter', url: '/newsletter' },
     { name: 'Policies', url: '/policies' },
-    { name: 'Contact', url: '/contact' }
+    { name: 'Safeguarding and welfare', url: '/safeguarding' },
+    { name: 'News', url: '/news' },
+    { name: 'Tournaments', url: '/tournaments' },
 ];
 
 const Navbar: React.FC = () => {

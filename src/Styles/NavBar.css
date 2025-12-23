@@ -1,24 +1,33 @@
 .main-nav {
+    display: flex;
+    justify-content: center;
     width: 100%;
     background-color: white; 
     box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
-    padding: 1rem 0; 
     margin-bottom: 25px;
     position: relative; 
 }
 
 .nav-list {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
     list-style: none; 
-    padding: 0;
-    margin: 0 auto; 
+    padding: 1rem 0rem;
     max-width: 1200px; 
-    display: flex; 
-    justify-content: center; 
-    gap: 3rem;
+    gap: 1rem;
     font-family: sans-serif; 
 }
 
+.nav-list li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
 .nav-list a {
+    display: flex;
+    align-items: center;     
     text-decoration: none;
     color: #6C3246;
     font-size: 1.2rem;
@@ -37,7 +46,7 @@
 @media (max-width: 990px) {
     .nav-list {
         display: grid; 
-        grid-template-columns: repeat(4, 1fr); 
+        grid-template-columns: repeat(5, 1fr); 
         gap: 15px 10px;
         padding: 0 15px;
     }
@@ -71,6 +80,8 @@
             justify-content: center;
             gap: 0.5rem;      
             color: #6C3246; 
+            font-size: 1.2rem;
+            font-family: sans-serif; 
             cursor: pointer;
             z-index: 1000;
             border: none;
@@ -78,7 +89,7 @@
     }
 
     .hamburger-icon .menu-icon-svg {
-        width: 1rem; 
+        width: 1.2rem; 
     }
 
     .nav-list {

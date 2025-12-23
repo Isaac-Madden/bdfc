@@ -5,9 +5,11 @@ import AdultsPage from '../Pages/AdultsPage'
 import JuniorsPage from '../Pages/JuniorsPage'
 import GalleryPage from '../Pages/GalleryPage';
 import SponsorsPage from '../Pages/SponsorsPage';
-import ContactPage from '../Pages/ContactPage';  
+import TournamentsPage from '../Pages/TournamentsPage';  
 import NewsletterPage from '../Pages/NewsletterPage';
 import PoliciesPage from '../Pages/PoliciesPage';
+import SafeGuardingPage from '../Pages/SafeGuardingPage';
+import NewsPage from '../Pages/NewsPage';
 
 interface AppRoute {
     path: string;
@@ -20,9 +22,11 @@ export const AppRoutes: AppRoute[] = [
     { path: '/juniors', element: <JuniorsPage /> },
     { path: '/gallery', element: <GalleryPage /> },
     { path: '/sponsors', element: <SponsorsPage /> },
-    { path: '/contact', element: <ContactPage /> },
+    { path: '/tournaments', element: <TournamentsPage /> },
     { path: '/newsletter', element: <NewsletterPage /> },
     { path: '/policies', element: <PoliciesPage /> },
+    { path: '/safeguarding', element: <SafeGuardingPage /> },
+    { path: '/news', element: <NewsPage /> },
 ]
 
 export const NotFoundRoute: AppRoute = {
