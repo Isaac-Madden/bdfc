@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Navbar from './Components/NavBar';
 import RouterConfig from './Utils/RouterConfig';
+import Sponsors from './Components/Sponsors';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <main className="main-content">
         <RouterConfig />
       </main>
+      <Sponsors />
       <Footer />
     </BrowserRouter>
   )

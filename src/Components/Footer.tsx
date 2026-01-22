@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Styles/Footer.css';
 import { FaFacebookF, FaEnvelope } from 'react-icons/fa';
+import '../Styles/Components/Footer.css';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

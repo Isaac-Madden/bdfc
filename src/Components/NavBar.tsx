@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/NavBar.css'; 
 import { FaBars } from 'react-icons/fa';
-
-interface NavLink {
-    name: string;
-    url: string;
-}
+import '../Styles/Components/NavBar.css';
+import type { NavLink } from '../Utils/Types.ts';
 
 const navLinks: NavLink[] = [
     { name: 'Home', url: '/' },
