@@ -31,7 +31,6 @@ const Navbar: React.FC = () => {
     return (
         <nav className="main-nav">
             <button className="hamburger-icon" onClick={toggleMenu} aria-expanded={isOpen} aria-label="Toggle navigation menu">
-                {/* <img src={menuSVG} alt="Menu icon" className="menu-icon-svg" /> */}
                 <FaBars aria-hidden="true" />
                 <span className="icon-text">MENU</span>
             </button>

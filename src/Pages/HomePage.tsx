@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
             people of all ages and disabilities with the opportunity to play the sport they love.
           </p>
           <p>
-            We offer a safe, welcoming and inclusive environment where members can improve their fitness, build confidence 
+            As a registered charity (1158017), we offer a safe, welcoming and inclusive environment where members can improve their fitness, build confidence 
             and make lifelong friends.
           </p>
           <p>

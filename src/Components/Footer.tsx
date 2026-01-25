@@ -33,7 +33,8 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="Copyright">
-        <p>&copy; {currentYear} Bradford Disability Football Club. All Rights Reserved.</p>
+        <p>&copy; {currentYear} Bradford Disability Football Club</p>
+        <p>All Rights Reserved</p>
         <p>Registered Charity: 1158017</p>
       </div>
 

@@ -41,7 +41,7 @@
         flex-direction: column;
         text-align: center;
         gap: 0.5rem;
-        padding: 2rem;
+        padding: 1rem 2rem;
 
         .text-section {
             text-align: center;
