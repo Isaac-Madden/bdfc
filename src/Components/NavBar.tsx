@@ -6,15 +6,15 @@ import type { NavLink } from '../Utils/Types.ts';
 
 const navLinks: NavLink[] = [
     { name: 'Home', url: '/' },
-    { name: 'Juniors', url: '/juniors' },
-    { name: 'Adults', url: '/adults' },
+    { name: 'About Us', url: '/about' },
+    { name: 'Players and Training', url: '/players' },
+    { name: 'Tournament', url: '/tournament' },
     { name: 'Sponsorship and Donations', url: '/sponsors' },
-    { name: 'Gallery', url: '/gallery' },
-    { name: 'Newsletter', url: '/newsletter' },
+    { name: 'Club Documents', url: '/club-documents' }, 
     { name: 'Safeguarding and welfare', url: '/safeguarding' },
-    { name: 'Policies', url: '/policies' },
     { name: 'News', url: '/news' },
-    { name: 'Tournaments', url: '/tournaments' },
+    { name: 'Gallery', url: '/gallery' },
+    { name: 'Social Calendar', url: '/social' },
 ];
 
 const Navbar: React.FC = () => {

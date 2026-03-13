@@ -30,7 +30,7 @@
     align-items: center;     
     text-decoration: none;
     color: #6C3246;
-    /* font-size: 1.2rem; */
+    font-size: 0.9rem;
     font-weight: 600; 
     transition: color 0.2s ease, border-bottom 0.2s ease; 
     border-bottom: 3px solid transparent; 
