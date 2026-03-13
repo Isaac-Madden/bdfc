@@ -14,7 +14,9 @@ const GalleryPage: React.FC = () => {
 
   useEffect(() => {
     if (!account || !container || !sas) {
+      console.error("Missing Azure configuration environment variables.");
       setHasError(true);
+      setLoading(false);
       return;
     }
 
