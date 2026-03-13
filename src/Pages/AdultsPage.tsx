@@ -4,7 +4,7 @@ import '../Styles/PageStyles/AdultsPage.css';
 const AdultsPage: React.FC = () => {
   return (
     <div className="AdultsPage">  
-      <h2>Adults team</h2>
+      <h2>Adults</h2>
       <div className='AdultsText'>
         <h3>About Us</h3>
         <p>
