@@ -5,7 +5,7 @@ const account = import.meta.env.VITE_AZURE_ACCOUNT_NAME;
 const container = import.meta.env.VITE_AZURE_CONTAINER_NAME;
 const sas = import.meta.env.VITE_AZURE_SAS_TOKEN;
 const baseUrl = `https://${account}.blob.core.windows.net/${container}`;
-const listUrl = `${baseUrl}?${sas}&restype=container&comp=list&prefix=test-2025`;
+const listUrl = `${baseUrl}${sas}&restype=container&comp=list&prefix=test-2025`;
 
 const GalleryPage: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
