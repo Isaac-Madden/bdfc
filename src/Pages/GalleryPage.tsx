@@ -4,31 +4,40 @@ import '../Styles/PageStyles/GalleryPage.css';
 const account = import.meta.env.VITE_AZURE_ACCOUNT_NAME;
 const container = import.meta.env.VITE_AZURE_CONTAINER_NAME;
 const sas = import.meta.env.VITE_AZURE_SAS_TOKEN;
-const url = `https://${account}.blob.core.windows.net/${container}/${sas}&restype=container&comp=list&prefix=test-2025`;
+const baseUrl = `https://${account}.blob.core.windows.net/${container}`;
+const listUrl = `${baseUrl}?${sas}&restype=container&comp=list&prefix=test-2025`;
 
 const GalleryPage: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-
     if (!account || !container || !sas) {
-      return console.error("Missing Azure config");
+      setHasError(true);
+      return;
     }
 
     const fetchImages = async () => {
-      const response = await fetch(url);
-      const xmlText = await response.text();
-      const xmlDoc = new DOMParser().parseFromString(xmlText, "application/xml");
-      const blobElements = xmlDoc.getElementsByTagName("Blob");
-      const blobArray = Array.from(blobElements);
+      try {
+        const response = await fetch(listUrl);
+        if (!response.ok) throw new Error();
+        
+        const xmlText = await response.text();
+        const xmlDoc = new DOMParser().parseFromString(xmlText, "application/xml");
+        const blobElements = Array.from(xmlDoc.getElementsByTagName("Blob"));
 
-      const imageUrls = blobArray.map((blob) => {
-        const nameTag = blob.getElementsByTagName("Name")[0];
-        const fileName = nameTag.textContent;
-        return `https://${account}.blob.core.windows.net/${container}/${fileName}`;
-      });
+        const imageUrls = blobElements.map((blob) => {
+          const fileName = blob.getElementsByTagName("Name")[0]?.textContent;
+          return `${baseUrl}/${fileName}`;
+        });
 
-      setImages(imageUrls);
+        setImages(imageUrls);
+      } catch {
+        setHasError(true);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchImages();
@@ -36,13 +45,23 @@ const GalleryPage: React.FC = () => {
 
   return (
     <div className="GalleryPage">
-      <div className="image-grid">
-        {images.map((url) => (
-            <img key={url} src={url} alt="Gallery item" className="gallery-image" />
-        ))}
-      </div>
+      {loading && <div className="gallery-loading">Loading gallery...</div>}
+      {hasError && !loading && <div className="gallery-error">Unable to load images.</div>}
+
+      {!loading && !hasError && (
+        <div className="image-grid">
+          {images.length > 0 ? (
+            images.map((url) => (
+              <img key={url} src={url} alt="Gallery item" className="gallery-image" loading="lazy" />
+            ))
+          ) : (
+            <p>No images found.</p>
+          )}
+        </div>
+      )}
     </div>
-  );
+);
+
 };
 
 export default GalleryPage;
