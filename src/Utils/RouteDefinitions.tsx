@@ -12,6 +12,7 @@ import SafeGuardingPage from '../Pages/SafeGuardingPage';
 import NewsPage from '../Pages/NewsPage';
 import AboutUsPage from '../Pages/AboutUsPage';
 import PlayersAndTrainingPage from '../Pages/PlayersAndTrainingPage';
+import CoachesPage from '../Pages/CoachesPage';
 
 interface AppRoute {
     path: string; 
@@ -20,8 +21,9 @@ interface AppRoute {
 
 export const AppRoutes: AppRoute[] = [
     { path: '/', element: <HomePage /> },
-    { path: '/adults', element: <AdultsPage /> },
-    { path: '/juniors', element: <JuniorsPage /> },
+    { path: '/players/adults', element: <AdultsPage /> },
+    { path: '/players/juniors', element: <JuniorsPage /> },
+    { path: '/players/coaches', element: <CoachesPage /> },
     { path: '/gallery', element: <GalleryPage /> },
     { path: '/sponsors', element: <SponsorsPage /> },
     { path: '/tournament', element: <TournamentPage /> },

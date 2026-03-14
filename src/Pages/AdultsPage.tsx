@@ -1,9 +1,11 @@
 import React from 'react';
 import '../Styles/PageStyles/AdultsPage.css';
+import Breadcrumb from '../Components/Breadcrumb';
 
 const AdultsPage: React.FC = () => {
   return (
     <div className="AdultsPage">  
+      <Breadcrumb />
       <h2>Adults</h2>
       <div className='AdultsText'>
         <h3>About Us</h3>

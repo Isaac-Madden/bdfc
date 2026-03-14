@@ -9,7 +9,7 @@
 }
 
 .nav-list {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between; 
     list-style: none; 
     padding: 0rem 1.5rem;
@@ -56,7 +56,7 @@
         height: 100%;
         padding: 10px 5px; 
         box-sizing: border-box;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
 }
