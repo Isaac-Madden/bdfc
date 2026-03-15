@@ -1,8 +1,78 @@
 .ClubDocumentsPage {
-    height: 50vh;
+    padding: 2rem 1rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
-    box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
-    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 1rem; 
+    box-shadow: 0 4px 20px rgba(108, 50, 70, 0.1);
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+
+    h2 {
+        color: #6c3246; 
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+    }
+}
+
+.directory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.directory-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+    text-decoration: none;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        transform: translateY(-5px);
+        border-bottom: 4px solid #FFB81C;
+        box-shadow: 0 8px 25px rgba(108, 50, 70, 0.15);
+    }
+
+    h3 {
+        color: #6c3246;
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+}
+
+.card-link {
+    color: #6c3246;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 1rem;
+    display: block;
+}
+
+.documents-loading, .documents-error {
+    padding: 3rem;
+    color: #6c3246;
+    font-weight: bold;
 }

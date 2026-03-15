@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
             we are more than just a club—we’re a community.
           </p>
           <p>
-            Take a look at our <a href="/bdfc-sroi-report-2026.pdf" target="_blank" rel="noreferrer">Social and Economic Value Report </a> 
+            Take a look at our <a href="/reports/sroi-report-2026.pdf" target="_blank" rel="noreferrer">Social and Economic Value Report </a> 
             to see the impact we’ve had on our members and the wider community.
           </p>
           <p>
