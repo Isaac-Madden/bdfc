@@ -71,7 +71,6 @@ const ClubDocumentsPage: React.FC = () => {
                 >
                   <h3>{friendlyName}</h3>
                   <p>Click to view or download the official club document.</p>
-                  <span className="card-link">View Document</span>
                 </a>
               );
             })
