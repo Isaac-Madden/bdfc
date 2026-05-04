@@ -14,7 +14,7 @@ const navLinks: NavLink[] = [
     { name: 'Safeguarding and welfare', url: '/safeguarding' },
     { name: 'News', url: '/news' },
     { name: 'Gallery', url: '/gallery' },
-    { name: 'Social Calendar', url: '/social' },
+    { name: 'Club Calendar', url: '/calendar' },
 ];
 
 const Navbar: React.FC = () => {

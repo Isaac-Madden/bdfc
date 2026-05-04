@@ -1,11 +1,11 @@
 import React from 'react';
-import '../Styles/PageStyles/SocialCalendarPage.css';
+import '../Styles/PageStyles/ClubCalendarPage.css';
 
-const SocialCalendarPage: React.FC = () => {
+const ClubCalendarPage: React.FC = () => {
   return (
-    <div className="SocialCalendarPage">   
-        <p>Waiting for Social Calendar content...</p>
+    <div className="ClubCalendarPage">   
+        <p>Waiting for Club Calendar content...</p>
     </div>
   )
 }
-export default SocialCalendarPage;
+export default ClubCalendarPage;

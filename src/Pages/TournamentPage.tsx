@@ -34,7 +34,10 @@ const TournamentPage: React.FC = () => {
             We are delighted to be partnering with Aire Valley Disability Sports, and grateful to Bradford & Bingley Rugby Club for hosting the event at their outstanding facilities as part of their commitment to supporting disability sport. 
           </p>
           <p>
-            This year’s tournament will take place on Sunday 13th September. Don’t miss out—register your club now!
+            This year’s tournament will take place on Sunday 13th September. 
+          </p>
+          <p>
+            <b>Don’t miss out! Register your club now by contacting us at <a href="mailto:bradforddisabilityfc@gmail.com"> bradforddisabilityfc@gmail.com</a></b>
           </p>
         </div>
     </div>

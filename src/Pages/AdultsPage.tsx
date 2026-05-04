@@ -10,7 +10,7 @@ const AdultsPage: React.FC = () => {
       <div className='AdultsText'>
         <h3>About Us</h3>
         <p>
-          We welcome all players aged 16 to 65 to the adult section of our family friendly club. 
+          We welcome all players aged 16 and over to the adult section of our family friendly club. 
           We try to make our club a fun place to be and many of trustees have family members that play at the club
           We believe that all players with a disability should be able to enjoy playing in a football in a team, whatever their ability.
           Our professional coaching team is structured in a way that caters for all based on their individual strengths. 
