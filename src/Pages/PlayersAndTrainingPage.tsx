@@ -25,6 +25,12 @@ const PlayersAndTrainingPage: React.FC = () => {
                     <p>Access coaching resources, training guides, and essential club documentation for our staff.</p>
                     <span className="card-link">View Details →</span>
                 </Link>
+
+                <Link to="/players/training" className="directory-card">
+                    <h3>Training</h3>
+                    <p>Everything you need to know about our training programs, schedules, and development opportunities.</p>
+                    <span className="card-link">View Details →</span>
+                </Link>
             </div>
         </div>
     );

@@ -13,6 +13,7 @@ import AboutUsPage from '../Pages/AboutUsPage';
 import PlayersAndTrainingPage from '../Pages/PlayersAndTrainingPage';
 import CoachesPage from '../Pages/CoachesPage';
 import ClubCalendarPage from '../Pages/SocialCalendarPage';
+import TrainingPage from '../Pages/TrainingPage';
 
 interface AppRoute {
     path: string; 
@@ -33,6 +34,7 @@ export const AppRoutes: AppRoute[] = [
     { path: '/news', element: <NewsPage /> },
     { path: '/about', element: <AboutUsPage /> },
     { path: '/players', element: <PlayersAndTrainingPage /> },
+    { path: '/players/training', element: <TrainingPage /> },
 ]
 
 export const NotFoundRoute: AppRoute = {
