@@ -1,39 +1,51 @@
 import React from 'react';
 import '../Styles/PageStyles/SponsorsPage.css';
+import fundersImage from '../assets/funders-image.png';
 
 const SponsorsPage: React.FC = () => {
   return (
-    <div className="SponsorsPage">   
-      <h2>Sponsorships and Donations</h2>
-      <div className='SponsorsText'>
-        <p>
-          Our There are no paid staff at BDFC, everything we do is powered by volunteers 
-          — people giving their time, energy and passion to make a difference. 
+    <div className="sponsors-container">
+      <header className="sponsors-header">
+        <h2>Sponsorships &amp; Donations</h2>
+        <p className="sponsors-subtitle">
+          Help us keep community football accessible for everyone.
         </p>
-        <p>
-          Our coaches are the only paid members of the team, helping us deliver the best possible sessions for everyone involved.
-        </p>
-        <p>
-          If Our running costs are around £50k per year and we cover these with money raised from donations, fundraising, and grants. 
-          We couldn’t do what we do without the incredible support around us.
-        </p>
-        <div className='theSponsors'>
-          <h3>A huge thank you to our funders: </h3>
-            <ul>
-              <li>The National Lottery Community Fund</li>
-              <li>The People’s Postcode Lottery</li>
-              <li>The Wharfedale Foundation</li>
-              <li>Sovereign Health Care</li>
-            </ul>
-            <p>We are always looking for a sponsor, so if you can support our great club, 
-              please get in touch using the link bradforddisabilityfc@gmail.com 
-            </p>
+      </header>
+
+      <div className="sponsors-content">
+        <div className="sponsors-info">
+          <p>
+            There are no paid staff at BDFC — everything we do is powered by volunteers giving their time, energy, and passion to make a difference. Our coaches are the only paid members, ensuring we deliver quality, safe sessions for everyone involved.
+          </p>
+
+          <p>
+            Our running costs are around <strong>£50k per year</strong>, which we cover through donations, fundraising, and grants. We couldn’t do what we do without the incredible support of our community.
+          </p>
+
+          <div className="cta-group">
+            <a
+              href="https://cafdonate.cafonline.org/9155"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Donate via CAF Online
+            </a>
+            <a
+              href="mailto:bradforddisabilityfc@gmail.com"
+              className="btn btn-secondary"
+            >
+              Get in Touch to Sponsor Us
+            </a>
+          </div>
         </div>
-        <p>
-          You can also make a donation via our CAF Donate account using the link <a href="https://cafdonate.cafonline.org/9155" target="_blank" rel="noopener noreferrer"> https://cafdonate.cafonline.org/9155</a> or by clicking on the Donate Button on our website.
-        </p>
+
+        <div className="sponsors-media">
+          <img src={fundersImage} alt="Our Amazing Funders and Partners" />
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 export default SponsorsPage;
