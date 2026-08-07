@@ -1,56 +1,115 @@
 import React from 'react';
 import '../Styles/PageStyles/ClubCalendarPage.css';
-
 import bdfc_club_logo from '../assets/bdfc_club_logo.png';
+
+interface EventItem {
+  date: string;
+  title: string;
+  location?: string;
+  tag?: 'Match' | 'Fundraiser' | 'Social' | 'Tournament' | 'Special';
+  details?: string;
+  isHighlight?: boolean;
+}
+
+interface MonthGroup {
+  month: string;
+  events: EventItem[];
+}
+
+const calendarData: MonthGroup[] = [
+  {
+    month: 'May 2026',
+    events: [
+      { date: '10th', title: 'Junior League Games', location: 'Leeds Fives, Limewood Approach, Seacroft, Leeds, LS14 1NH', tag: 'Match' },
+      { date: '31st', title: 'Adult League Games', location: 'West Riding County FA, Fleet Lane, Woodlesford, Leeds, LS26 8NX', tag: 'Match' },
+      { date: '31st', title: 'Junior League Games', location: 'Thornes', tag: 'Match' },
+    ],
+  },
+  {
+    month: 'June 2026',
+    events: [
+      { date: '6th', title: 'Bag Pack Fundraiser', location: 'ASDA, Girlington (10am - 3pm)', tag: 'Fundraiser' },
+      { date: '28th', title: 'Adult League Games', location: 'Bradford & Bingley Sports Club, Wagon Lane, Bingley, BD16 1LT', tag: 'Match' },
+    ],
+  },
+  {
+    month: 'July 2026',
+    events: [
+      { date: '5th', title: 'Flamingoland Trip', tag: 'Social' },
+      { date: '12th', title: 'Gomersal & Cleckheaton Tournament', tag: 'Tournament' },
+      { date: '19th', title: 'Bridlington Tournament', details: 'Day trip with coach transfer provided.', tag: 'Tournament' },
+    ],
+  },
+  {
+    month: 'September 2026',
+    events: [
+      { date: '12th', title: 'Pre-Tournament Party', location: 'Bradford & Bingley Sports Club, Wagon Lane, BD16 1LT', tag: 'Social' },
+      { date: '13th', title: 'BDFC Annual Tournament', location: 'Wagon Lane, BD16 1LT', tag: 'Tournament', isHighlight: true },
+      {
+        date: '18th',
+        title: 'BDFC 25th Anniversary Night',
+        location: 'Bradford & Bingley Sports Club, Wagon Lane, BD16 1LT',
+        details: 'Formal sit-down meal celebrating 25 years. Special guests, live band, and founder Mr. Paul Squires in attendance!',
+        tag: 'Special',
+        isHighlight: true,
+      },
+    ],
+  },
+  {
+    month: 'October 2026',
+    events: [
+      { date: '23rd', title: 'Presentation Evening', location: 'The New Tyke, Thornton Rd, BD13 3DG', tag: 'Social' },
+    ],
+  },
+  {
+    month: 'December 2026',
+    events: [
+      { date: '11th', title: 'Christmas Party', location: 'The New Tyke, Thornton Rd, BD13 3DG', tag: 'Social' },
+    ],
+  },
+];
 
 const ClubCalendarPage: React.FC = () => {
   return (
-    <div className="ClubCalendarPage">   
-        <img src={bdfc_club_logo} alt=" Bradford Disability Football Club Logo" />
-        <h2>Club Calendar</h2>
+    <div className="calendar-page">
+      <header className="calendar-header">
+        <img src={bdfc_club_logo} alt="Bradford Disability Football Club Logo" className="club-logo" />
+        <h2>Club Calendar 2026</h2>
+        <p className="subtitle">Keep up to date with match days, tournaments, and social events.</p>
+      </header>
 
-        <div className="calendar-container"> 
-          <h3>May 2026</h3>
-          <ul>
-            <li>10th Junior League games at Leeds Fives, Limewood Approach, Seacroft, Leeds, LS14 1NH.</li>
-            <li>31st Adult League games at West Riding County FA, Fleet Lane, Woodlesford, Leeds, LS26 8NX.</li>
-            <li>31st Junior League games at Thornes</li>
-          </ul>
-          <h3>June 2026</h3>
-          <ul>
-            <li>6th Bag Pack fundraiser at ASDA, Girlington 10am to 3pm.</li>
-            <li>28th June Adult League games at Bradford and Bingley Sports Club, Wagon Lane, Bingley, BD16 1LT</li>
-          </ul>
-          <h3>July 2026</h3>
-          <ul>
-            <li>5th Flamingoland</li>
-            <li>12th Gomersal and Cleckheaton Tournament</li>
-            <li>19th Bridlington Tournament. This will be day trip and we shall run a coach transfer.</li>
-          </ul>
-          <h3>August 2026</h3>
-          <ul>
-            <li>no events yet</li>
-          </ul>
-          <h3>September 2026</h3>
-          <ul>
-            <li>12th Pre-tournament Party at Bradford and Bingley Sports Club, Wagon Lane, BD16 1LT</li>
-            <li>13th Bradford Disability Football Club Annual Tournament, Wagon Lane, BD16 1LT</li>
-            <li>18th Bradford Disability Football Club 25th Anniverasry night at Bradford and Bingley Sports Club, Wagon Lane BD16 1LT. This is a formal sit down meal to celebrate a fantastic milestone. Our founder Mr Paul Squires will be in attendance. Live Band with special guest on guitar!</li>
-          </ul>
-          <h3>October 2026</h3>
-          <ul>
-            <li>23nd. Presentation Evening at The New Tyke, Thornton Rd, BD13 3DG</li>
-          </ul>
-          <h3>November 2026</h3>
-          <ul>
-            <li>no events yet</li>
-          </ul>
-          <h3>December 2026</h3>
-          <ul>
-            <li>11th. Christmas Party at The New Tyke, Thornton Rd, BD13 3DG</li>
-          </ul>
-        </div>
+      <div className="calendar-timeline">
+        {calendarData.map((group, idx) => (
+          <div key={idx} className="month-section">
+            <h3 className="month-heading">{group.month}</h3>
+            <div className="events-grid">
+              {group.events.map((event, eventIdx) => (
+                <div key={eventIdx} className={`event-card ${event.isHighlight ? 'highlight-card' : ''}`}>
+                  <div className="date-badge">
+                    <span className="date-num">{event.date}</span>
+                  </div>
+                <div className="event-details">
+                  <div className="event-header-row">
+                    <h4>{event.title}</h4>
+                    {event.tag && <span className={`tag tag-${event.tag.toLowerCase()}`}>{event.tag}</span>}
+                  </div>
+                  
+                  {event.location && (
+                    <p className="event-location">
+                      {event.location}
+                    </p>
+                  )}
+                  
+                  {event.details && <p className="event-extra">{event.details}</p>}
+                </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+
 export default ClubCalendarPage;

@@ -2,37 +2,60 @@ import React from 'react';
 import '../Styles/PageStyles/SafeGuardingPage.css';
 
 const SafeGuardingPage: React.FC = () => {
-    return (
-        <div className="SafeGuardingPage">   
-            <h2>Safeguarding and Welfare</h2>
-            <div className='SafeGuardingText'>
-                <h3>Introduction to Welfare at Bradford Disability Football Club</h3>
-                <p>
-                    Welfare isn’t just about us dealing with your current issues, 
-                    it’s about your general wellbeing and safety whilst at training and travelling too and from club events.        
-                </p>
-                <p>
-                    If it’s just someone to talk to, we’re here to listen and if possible point you in the right direction, if requested.
-                </p>
-                <p>
-                    If you wish to discuss welfare, health and your wellbeing we are willing to help if we can.
-                </p>
-                <p>
-                    We would rather know about potential issues so that we can be proactive 
-                    rather than reactive and we hope that our members and carers are reassured 
-                    and feel that they can discuss their issues with any club official in confidence.
-                </p>
-                <p>
-                    Your welfare officer is Allan Watt and he can be contacted at <a href="mailto:bdfcwelfare@yahoo.com">bdfcwelfare@yahoo.com</a>
-                </p>
-                <p>
-                    Tracy is also here to help out with Welfare
-                </p>
-                <p>
-                    If either are unavailable please speak to a familiar face at training and we will help.
-                </p>
+  return (
+    <div className="safeguarding-container">
+      <header className="safeguarding-header">
+        <h2>Safeguarding &amp; Welfare</h2>
+        <p className="safeguarding-subtitle">
+          Creating a safe, supportive, and enjoyable environment for everyone at BDFC.
+        </p>
+      </header>
+
+      {/* Trust / Reassurance Callout */}
+      <div className="welfare-banner">
+        <h3>Our Commitment to You</h3>
+        <p>
+          Welfare isn’t just about dealing with problems after they happen—it’s about your general wellbeing, safety, and happiness while at training, matches, and traveling to and from club events. 
+        </p>
+        <p className="highlight-text">
+          We would always rather know about potential issues early so we can be proactive. Members, carers, and families can speak to any club official in total confidence.
+        </p>
+      </div>
+
+      {/* Contact Cards Section */}
+      <section className="contacts-section">
+        <h3>Your Welfare Officers</h3>
+        <div className="officer-cards">
+          <div className="officer-card">
+            <div className="officer-avatar">AW</div>
+            <div className="officer-details">
+              <h4>Allan Watt</h4>
+              <p className="role">Lead Welfare Officer</p>
+              <a href="mailto:bdfcwelfare@yahoo.com" className="contact-btn">
+                Email Allan
+              </a>
             </div>
+          </div>
+
+          <div className="officer-card">
+            <div className="officer-avatar">T</div>
+            <div className="officer-details">
+              <h4>Tracy</h4>
+              <p className="role">Welfare Support</p>
+              <span className="contact-note">Available at training sessions</span>
+            </div>
+          </div>
         </div>
-    )
-}
+      </section>
+
+      {/* Fallback Notice */}
+      <div className="safeguarding-footer-note">
+        <p>
+          <strong>Need help at a session?</strong> If Allan or Tracy are unavailable, please approach any coach or familiar face at training—we are always here to listen and guide you in the right direction.
+        </p>
+      </div>
+    </div>
+  );
+};
+
 export default SafeGuardingPage;
