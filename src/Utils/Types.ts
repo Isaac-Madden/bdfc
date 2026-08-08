@@ -22,3 +22,9 @@ export interface MonthGroup {
   month: string;
   events: EventItem[];
 }
+
+export interface CoachInterface {
+    name: string;
+    text: string;
+    picture: string;
+}
