@@ -11,8 +11,15 @@
     --shadow-soft: 0 10px 25px -5px rgba(108, 50, 70, 0.08), 0 4px 6px -2px rgba(255, 191, 0, 0.1);
 }
 
+/* 1. Ensure border-box sizing across the component to prevent padding overflows */
+.NewsPage, 
+.NewsPage * {
+    box-sizing: border-box;
+}
+
 .NewsPage {
     max-width: 1100px;
+    width: 100%;
     margin: 2rem auto;
     padding: 2.5rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -44,13 +51,16 @@
 
     .newspage-content {
         display: flex;
+        flex-wrap: wrap; /* Prevents containers from pushing outside parent on narrow screens */
         gap: 2rem;
         align-items: flex-start;
+        width: 100%;
     }
 
     /* Left Section: Text Content */
     .news-text-container {
-        flex: 1.2;
+        flex: 1 1 300px; /* Allows smooth shrinking and wrapping down to 300px min width */
+        min-width: 0;   /* Fixes flexbox text overflow bug */
         background: var(--bg-card);
         padding: 2rem;
         border-radius: var(--radius-lg);
@@ -78,7 +88,8 @@
 
     /* Right Section: Newsletters Archive */
     .newsletters-container {
-        flex: 1;
+        flex: 1 1 300px; /* Allows smooth shrinking and wrapping down to 300px min width */
+        min-width: 0;   /* Fixes flexbox text overflow bug */
         background: var(--bg-card);
         padding: 2rem;
         border-radius: var(--radius-lg);
@@ -145,12 +156,14 @@
                     width: 20px;
                     height: 20px;
                     color: var(--brand-primary);
+                    flex-shrink: 0;
                 }
 
                 .arrow-icon {
                     width: 18px;
                     height: 18px;
                     color: var(--text-muted);
+                    flex-shrink: 0;
                     transition: transform 0.2s ease, color 0.2s ease;
                 }
 
@@ -180,19 +193,30 @@
     }
 }
 
-/* Responsive adjustments */
+/* 2. Responsive Breakpoint Fixes */
 @media (max-width: 768px) {
     .NewsPage {
-        padding: 1.5rem;
-        margin: 1rem;
+        padding: 1.25rem;
+        margin: 1rem auto;
+        width: calc(100% - 2rem); /* Keeps healthy screen margin */
+
+        .newspage-header {
+            margin-bottom: 1.5rem;
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
 
         .newspage-content {
             flex-direction: column;
+            gap: 1.25rem;
         }
 
         .news-text-container,
         .newsletters-container {
             width: 100%;
+            padding: 1.25rem; /* Reduces inner padding on small screens to save space */
         }
     }
 }
