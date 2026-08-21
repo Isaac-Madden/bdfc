@@ -3,10 +3,10 @@ import '../Styles/PageStyles/NewsPage.css';
 
 const NewsPage: React.FC = () => {
     const newsletters = [
-        { month: 'August 2026', link: '/newsletters/august-2026.pdf', isNew: true },
-        { month: 'July 2026', link: '/newsletters/july-2026.pdf' },
-        { month: 'June 2026', link: '/newsletters/june-2026.pdf' },
-        { month: 'May 2026', link: '/newsletters/may-2026.pdf' },
+        { month: 'August 2026', link: '/newsletters/newsletter-august-2026.pdf', isNew: true },
+        { month: 'July 2026', link: '/newsletters/newsletter-july-2026.pdf' },
+        { month: 'June 2026', link: '/newsletters/newsletter-june-2026.pdf' },
+        { month: 'May 2026', link: '/newsletters/newsletter-may-2026.pdf' },
     ];
 
     return (
