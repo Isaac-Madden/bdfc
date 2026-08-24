@@ -12,6 +12,7 @@
 .Content {
     width: 100%;
     max-width: 1200px; 
+    padding-top: 1rem;
 }
 
 h3 {

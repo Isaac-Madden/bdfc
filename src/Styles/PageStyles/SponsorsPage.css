@@ -1,7 +1,6 @@
 .sponsors-container {
-  max-width: 1100px;
   margin: 2rem auto;
-  padding: 2.5rem;
+  padding: 1.5rem 2.5rem;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(108, 50, 70, 0.12), 0 2px 6px rgba(255, 191, 0, 0.15);
@@ -17,7 +16,7 @@
     color: #6c3246;
     font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
   }
 
   .sponsors-subtitle {
@@ -29,7 +28,7 @@
 .sponsors-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -54,6 +53,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
 }
 
 .btn {
