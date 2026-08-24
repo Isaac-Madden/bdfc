@@ -5,7 +5,7 @@ const AboutUsPage: React.FC = () => {
     return (
     <div className="AboutUsPage">   
          <div className="text-section">
-          <h2>About Us!</h2>
+          <h2>Our Club</h2>
           <p>
             Celebrating its 25th anniversary, Bradford Disability Football Club (BDFC) is the largest disability football club in the area, supporting more than 100 members and transforming lives through inclusive sport.  
           </p>
@@ -22,7 +22,7 @@ const AboutUsPage: React.FC = () => {
             A player-centred approach ensures a safe and family-focused environment where everyone feels welcome and can develop at their own pace. The club’s impact is profound, with participants reporting that they feel healthier, happier and more confident.
           </p>
           <p>
-            For many families, BDFC is more than a football club—it is a second family and a community where friendships flourish and everyone truly belongs.
+            <strong>For many families, BDFC is more than a football club—it is a second family and a community where friendships flourish and everyone truly belongs.</strong>
           </p>
         </div>
     </div>
