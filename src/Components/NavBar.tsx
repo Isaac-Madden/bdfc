@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
 
     const closeMenu = () => {
         setIsOpen(false);
+        window.scrollTo(0, 0);
     };
 
     return (
