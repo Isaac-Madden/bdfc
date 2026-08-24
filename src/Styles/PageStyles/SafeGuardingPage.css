@@ -1,5 +1,4 @@
 .safeguarding-container {
-  max-width: 900px;
   margin: 2rem auto;
   padding: 2.5rem;
   background-color: #ffffff;
@@ -107,17 +106,12 @@
 .officer-details {
   display: flex;
   flex-direction: column;
+  text-align: start;
 
   h4 {
     margin: 0;
     font-size: 1.1rem;
     color: #1a1a1a;
-  }
-
-  .role {
-    margin: 0.2rem 0 0.6rem 0;
-    font-size: 0.875rem;
-    color: #666;
   }
 
   .contact-btn {
