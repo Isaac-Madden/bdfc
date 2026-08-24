@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/PageStyles/HomePage.css';
-
-import bdfc_pic from '../assets/bdfc_pic.png';
+import bdfc_club_logo from '../assets/bdfc_club_logo.png';
 
 const HomePage: React.FC = () => {
   return (
@@ -31,11 +30,9 @@ const HomePage: React.FC = () => {
         </div>
         
         <div className="image-section">
-          <img 
-            src={bdfc_pic}
-            alt="Football action shot" 
-          />
+          <img src={bdfc_club_logo} alt="Bradford Disability Football Club Logo" className="club-logo" />
         </div>
+
     </div>
   )
 }

@@ -1,3 +1,4 @@
+/* Base Styles */
 .HomePage {
     padding: 2rem 3rem;
     box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
@@ -7,48 +8,58 @@
     font-family: sans-serif;
     justify-content: center;
     align-items: center;
-
-    .text-section {
-        flex: 1;
-        text-align: left;
-
-        h2 {
-            color: #712133; 
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            color: #333; 
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        a {
-            font-weight: bold;
-        }
-    }
-
-    .image-section {
-        flex: 1;
-
-        img {
-            max-width: 100%;
-            height: auto;  
-            border-radius: 1.5rem; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-        }
-    }
 }
 
-@media (max-width: 980px) {
+.HomePage .text-section {
+    flex: 2;
+    text-align: left;
+    min-width: 0
+}
+
+.HomePage .text-section h2 {
+    color: #712133; 
+    margin-bottom: 1.5rem;
+}
+
+.HomePage .text-section p {
+    color: #333; 
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.HomePage .text-section a {
+    font-weight: bold;
+}
+
+.HomePage .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.HomePage .image-section img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;  
+    object-fit: contain;
+    min-width: 250px;
+}
+
+@media (max-width: 780px) {
     .HomePage {
         flex-direction: column;
         text-align: center;
-        gap: 0.5rem;
-        padding: 1rem 2rem;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
 
-        .text-section {
-            text-align: center;
-        }
+    .HomePage .text-section {
+        text-align: center;
+    }
+
+    .HomePage .image-section img {
+        max-width: 140px;
     }
 }
