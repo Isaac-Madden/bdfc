@@ -1,27 +1,48 @@
 .GalleryPage {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px; 
-    box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
     border-radius: 1rem; 
-    font-family: sans-serif;
+    box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #6c3246; 
-    font-weight: 500;
+}
 
-    .image-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        padding: 1rem;
-    }
+.calendar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-    .gallery-image {
-        width: 10rem;
-        height: 10rem; 
-        object-fit: cover;
-        border-radius: 1rem;
-    }
+.club-logo {
+  width: 100px;
+  height: auto;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery-image {
+    width: 10rem;
+    height: 10rem; 
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.gallery-loading,
+.gallery-error {
+  margin-top: 2rem;
+  color: #666;
+  font-weight: 500;
 }

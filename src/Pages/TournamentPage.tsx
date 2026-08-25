@@ -5,7 +5,7 @@ const TournamentPage: React.FC = () => {
   return (
     <div className="TournamentPage">   
         <div className="text-section">
-          <h2>Our Tournament</h2>
+          <h2>The Bradford Disability Football Club Annual Tournament</h2>
           <p>
             Bradford Disability Football Club is widely respected for its professional approach to everything it does. 
             At the heart of the club is a clear mission: to ensure that people with disabilities in Bradford have access to meaningful sporting opportunities at their own pace, alongside personal and social development in a safe, player-centred environment. 

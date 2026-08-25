@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/PageStyles/GalleryPage.css';
+import bdfc_club_logo from '../assets/bdfc_club_logo.png';
 
 const account = import.meta.env.VITE_AZURE_ACCOUNT_NAME;
 const container = import.meta.env.VITE_AZURE_CONTAINER_NAME;
@@ -47,6 +48,14 @@ const GalleryPage: React.FC = () => {
 
   return (
     <div className="GalleryPage">
+
+      <header className="calendar-header">
+          <img src={bdfc_club_logo} alt="Bradford Disability Football Club Logo" className="club-logo" />
+          <h2>Club Gallery</h2>
+          <p>Check out our latest photos from matches and events.</p>
+      </header>
+
+
       {loading && <div className="gallery-loading">Loading gallery...</div>}
       {hasError && !loading && <div className="gallery-error">Unable to load images.</div>}
 

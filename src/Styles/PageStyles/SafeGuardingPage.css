@@ -1,7 +1,7 @@
 .safeguarding-container {
   margin: 2rem auto;
-  padding: 2.5rem;
-  background-color: #ffffff;
+  padding: 1.5rem 2.5rem;
+  background-color: #faf8f9;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(108, 50, 70, 0.12), 0 2px 6px rgba(255, 191, 0, 0.15);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -16,7 +16,7 @@
     color: #6c3246;
     font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
   }
 
   .safeguarding-subtitle {
@@ -27,10 +27,10 @@
 
 /* Banner / Intro Box */
 .welfare-banner {
-  background-color: #fdf8f9;
+  background-color: #ffffff;
   border-left: 4px solid #6c3246;
   padding: 1.5rem;
-  border-radius: 0 8px 8px 0;
+  border-radius: 10px;
   margin-bottom: 2.5rem;
 
   h3 {
@@ -78,9 +78,9 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  border: 1px solid #eaeaea;
+  border-left: 4px solid #6c3246;
   border-radius: 10px;
-  background-color: #fafafa;
+  background-color: #ffffff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
