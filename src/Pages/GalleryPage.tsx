@@ -1,78 +1,110 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useAzureBlobs, type AzureDocument } from '../Hooks/useAzureBlobs';
 import '../Styles/PageStyles/GalleryPage.css';
 import bdfc_club_logo from '../assets/bdfc_club_logo.png';
 
-const account = import.meta.env.VITE_AZURE_ACCOUNT_NAME;
-const container = import.meta.env.VITE_AZURE_CONTAINER_NAME;
-const sas = import.meta.env.VITE_AZURE_SAS_TOKEN;
-const baseUrl = `https://${account}.blob.core.windows.net/${container}`;
-const listUrl = `${baseUrl}${sas}&restype=container&comp=list&prefix=test-2025`;
+interface Album {
+  folderName: string;
+  coverImage: string;
+  images: AzureDocument[];
+}
 
 const GalleryPage: React.FC = () => {
-  const [images, setImages] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const { documents, loading, hasError } = useAzureBlobs('club-pictures');
+  const [selectedFolder, setSelectedFolder] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (!account || !container || !sas) {
-      console.error("Missing Azure configuration environment variables.");
-      setHasError(true);
-      setLoading(false);
-      return;
-    }
+  const albums: Album[] = useMemo(() => {
+    const grouped: Record<string, AzureDocument[]> = {};
 
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(listUrl);
-        if (!response.ok) throw new Error();
-        
-        const xmlText = await response.text();
-        const xmlDoc = new DOMParser().parseFromString(xmlText, "application/xml");
-        const blobElements = Array.from(xmlDoc.getElementsByTagName("Blob"));
-
-        const imageUrls = blobElements.map((blob) => {
-          const fileName = blob.getElementsByTagName("Name")[0]?.textContent;
-          return `${baseUrl}/${fileName}`;
-        });
-
-        setImages(imageUrls);
-      } catch {
-        setHasError(true);
-      } finally {
-        setLoading(false);
+    documents.forEach((doc) => {
+      const pathSegments = doc.rawName.split('/');
+      
+      if (pathSegments.length > 2) {
+        const folderName = pathSegments[1];
+        if (!grouped[folderName]) {
+          grouped[folderName] = [];
+        }
+        grouped[folderName].push(doc);
       }
-    };
+    });
 
-    fetchImages();
-  }, []);
+    return Object.keys(grouped)
+      .sort((a, b) => b.localeCompare(a)) 
+      .map((folderName) => ({
+        folderName,
+        coverImage: grouped[folderName][0]?.url || '', 
+        images: grouped[folderName],
+      }));
+  }, [documents]);
+
+ 
+  const activeAlbum = albums.find((album) => album.folderName === selectedFolder);
 
   return (
     <div className="GalleryPage">
-
       <header className="calendar-header">
-          <img src={bdfc_club_logo} alt="Bradford Disability Football Club Logo" className="club-logo" />
-          <h2>Club Gallery</h2>
-          <p>Check out our latest photos from matches and events.</p>
+        <img src={bdfc_club_logo} alt="Bradford Disability Football Club Logo" className="club-logo" />
+        <h2>Club Gallery</h2>
+        <p>Check out our latest photos from matches and events.</p>
       </header>
-
 
       {loading && <div className="gallery-loading">Loading gallery...</div>}
       {hasError && !loading && <div className="gallery-error">Unable to load images.</div>}
 
       {!loading && !hasError && (
-        <div className="image-grid">
-          {images.length > 0 ? (
-            images.map((url) => (
-              <img key={url} src={url} alt="Gallery item" className="gallery-image" loading="lazy" />
-            ))
-          ) : (
-            <p>No images found.</p>
+        <>
+          {!selectedFolder && (
+            <div className="albums-grid">
+              {albums.length > 0 ? (
+                albums.map((album) => (
+                  <button
+                    key={album.folderName}
+                    className="album-card"
+                    onClick={() => setSelectedFolder(album.folderName)}
+                  >
+                    {album.coverImage && (
+                      <div className="album-cover-wrapper">
+                        <img src={album.coverImage} alt={album.folderName} className="album-cover" />
+                      </div>
+                    )}
+                    <div className="album-info">
+                      <h3>{album.folderName}</h3>
+                      <p>{album.images.length} Photos</p>
+                    </div>
+                  </button>
+                ))
+              ) : (
+                <p>No albums found.</p>
+              )}
+            </div>
           )}
-        </div>
+
+          {selectedFolder && activeAlbum && (
+            <div className="album-detail-view">
+              <div className="album-header">
+                <button className="back-button" onClick={() => setSelectedFolder(null)}>
+                  &larr; Back to Albums
+                </button>
+                <h3>{activeAlbum.folderName}</h3>
+              </div>
+
+              <div className="image-grid">
+                {activeAlbum.images.map((img) => (
+                  <img
+                    key={img.url}
+                    src={img.url}
+                    alt={img.fileName}
+                    className="gallery-image"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
-);
-
+  );
 };
 
 export default GalleryPage;

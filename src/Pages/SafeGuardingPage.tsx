@@ -11,7 +11,6 @@ const SafeGuardingPage: React.FC = () => {
         </p>
       </header>
 
-      {/* Trust / Reassurance Callout */}
       <div className="welfare-banner">
         <h3>Our Commitment to You</h3>
         <p>
@@ -22,7 +21,6 @@ const SafeGuardingPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Contact Cards Section */}
       <section className="contacts-section">
         <h3>Your Welfare Officers</h3>
         <div className="officer-cards">
@@ -48,7 +46,6 @@ const SafeGuardingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Fallback Notice */}
       <div className="safeguarding-footer-note">
         <p>
           <strong>Need help at a session?</strong> If Allan or Tracy are unavailable, please approach any coach or familiar face at training—we are always here to listen and guide you in the right direction.
