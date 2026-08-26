@@ -57,6 +57,26 @@
   box-sizing: border-box;
 }
 
+.album-detail-view {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.album-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Forces child elements to align left */
+  margin-bottom: 1.5rem;
+}
+
+.album-header h3 {
+  width: 100%;
+  text-align: center; /* Keeps the album title centered if desired */
+}
+
 .album-card {
 background: #ffffff;
   width: 200px;
@@ -110,14 +130,104 @@ padding: 1rem;
 }
 
 .back-button {
-  background: transparent;
-  border: 1px solid #ccc;
+  background-color: rgba(108, 50, 70, 0.08); /* Soft claret tint */
+  color: #6c3246; /* BDFC Claret */
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 1rem; /* Pill shape */
+  border: none;
   cursor: pointer;
-  font-weight: 500;
+  margin: 0rem 0rem 1rem 2rem;
 }
 
 .back-button:hover {
-  background: #f0f0f0;
+  background-color: #6c3246;
+  color: #ffffff;
+  border-color: #6c3246;
+  transform: translateX(-3px); /* Subtle shift left on hover */
+  box-shadow: 0 4px 12px rgba(108, 50, 70, 0.25);
+}
+
+.back-button:active {
+  transform: translateX(-1px) scale(0.98);
+}
+
+.gallery-image {
+  cursor: pointer;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 80%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.lightbox-nav.prev { left: 10px; }
+.lightbox-nav.next { right: 10px; }
+
+.lightbox-thumbnails {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  max-width: 80%;
+  margin-top: 1rem;
+  padding: 8px 0;
+}
+
+.lightbox-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  opacity: 0.5;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.lightbox-thumb.active {
+  opacity: 1;
+  border: 2px solid #ffffff;
 }
