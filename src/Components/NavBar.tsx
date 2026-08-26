@@ -8,13 +8,13 @@ const navLinks: NavLink[] = [
     { name: 'Home', url: '/' },
     { name: 'About Us', url: '/about' },
     { name: 'Players and Training', url: '/players' },
-    { name: 'Tournament', url: '/tournament' },
+    { name: 'Gallery', url: '/gallery' },
     { name: 'Sponsorship and Donations', url: '/sponsors' },
-    { name: 'Club Documents', url: '/club-documents' }, 
+    { name: 'Club Calendar', url: '/calendar' },
     { name: 'Safeguarding and welfare', url: '/safeguarding' },
     { name: 'News', url: '/news' },
-    { name: 'Gallery', url: '/gallery' },
-    { name: 'Club Calendar', url: '/calendar' },
+    { name: 'Tournament', url: '/tournament' },
+    { name: 'Club Documents', url: '/club-documents' }, 
 ];
 
 const Navbar: React.FC = () => {
