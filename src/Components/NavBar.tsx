@@ -14,7 +14,7 @@ const navLinks: NavLink[] = [
     { name: 'Safeguarding and welfare', url: '/safeguarding' },
     { name: 'News', url: '/news' },
     { name: 'Tournament', url: '/tournament' },
-    { name: 'Club Documents', url: '/club-documents' }, 
+    { name: 'Club Documents and Policies', url: '/club-documents' }, 
 ];
 
 const Navbar: React.FC = () => {
