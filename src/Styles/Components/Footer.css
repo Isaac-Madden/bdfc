@@ -64,7 +64,7 @@ a:hover {
     font-size: 0.9rem;
     opacity: 0.7;
     color: #6C3246;
-    padding-bottom: 1rem;
+    padding: 1rem 0rem;
 }
 
 .Copyright p {

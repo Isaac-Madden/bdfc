@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF, FaEnvelope, FaInstagramSquare } from 'react-icons/fa';
 import '../Styles/Components/Footer.css';
 
 const Footer: React.FC = () => {
@@ -27,6 +27,16 @@ const Footer: React.FC = () => {
               aria-label="Follow us on Facebook"
             >
               <FaFacebookF aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://www.instagram.com/bradford_disability_fc" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Follow us on Instagram"
+            >
+              <FaInstagramSquare aria-hidden="true" />
             </a>
           </li>
         </ul>

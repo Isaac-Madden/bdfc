@@ -6,14 +6,14 @@ import type {SponsorInterface} from '../Utils/Types.ts';
 
 export const SponsorData: SponsorInterface[] = [
     {
-        name: 'The Wharfedale Foundation',
-        logo: wharfedaleFoundation,
-        url: 'https://www.wharfedalefoundation.org.uk/',
-    },
-    {
         name: 'The National Lottery Community Fund',
         logo: nationalLottery,
         url: 'https://www.tnlcommunityfund.org.uk/',
+    },
+    {
+        name: 'The Wharfedale Foundation',
+        logo: wharfedaleFoundation,
+        url: 'https://www.wharfedalefoundation.org.uk/',
     },
     {
         name: 'Sovereign Health',
