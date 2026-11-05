@@ -7,7 +7,7 @@ const ClubDocumentsPage: React.FC = () => {
 
   return ( 
     <div className="ClubDocumentsPage">
-      <h2>Club Documents</h2>
+      <h2>Club Documents and Policies</h2>
       
       {loading && <div className="documents-loading">Loading documents...</div>}
       {hasError && !loading && <div className="documents-error">Unable to load documents.</div>}
