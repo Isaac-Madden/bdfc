@@ -9,6 +9,7 @@ export interface AzureDocument {
   url: string;
   fileName: string;
   rawName: string;
+  lastModified: string;
 }
 
 export const useAzureBlobs = (folderPrefix: string) => {
@@ -37,13 +38,14 @@ export const useAzureBlobs = (folderPrefix: string) => {
 
         const fetchedDocs: AzureDocument[] = blobElements.map((blob) => {
           const rawName = blob.getElementsByTagName("Name")[0]?.textContent || "";
-          // Extract file name without path prefix
           const fileName = rawName.split('/').pop() || rawName;
+          const lastModified = blob.getElementsByTagName("Last-Modified")[0]?.textContent || "";
 
           return {
-            url: `${baseUrl}/${rawName}${sas}`, // Includes SAS token so non-public blobs open correctly
+            url: `${baseUrl}/${rawName}${sas}`,
             fileName,
-            rawName
+            rawName,
+            lastModified
           };
         });
 
