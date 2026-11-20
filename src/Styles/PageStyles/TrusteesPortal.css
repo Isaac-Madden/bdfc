@@ -1,0 +1,65 @@
+.TrusteesPortal {
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 15px -5px rgba(108, 50, 70, 0.4), 0 4px 6px -2px rgba(255, 191, 0, 0.2);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+.TrusteesPortal h2 {
+    color: #6c3246;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.TrusteesPortal p {
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+.PortalLoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 20rem;
+}
+
+.PortalLoginForm input {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border: 1px solid #6c3246;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: #6c3246;
+}
+
+.PortalLoginForm input:focus {
+    outline: none;
+    border-color: #6c3246;
+    box-shadow: 0 0 0 3px rgba(108, 50, 70, 0.15);
+}
+
+.PortalLoginForm button {
+    padding: 0.75rem 1rem;
+    background-color: #6c3246;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.PortalLoginForm button:hover {
+    background-color: #552536;
+}
+
+.PortalError {
+    margin: 1rem;
+}
