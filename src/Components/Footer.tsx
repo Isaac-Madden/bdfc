@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaEnvelope, FaInstagramSquare } from 'react-icons/fa';
 import '../Styles/Components/Footer.css';
 
@@ -46,6 +47,7 @@ const Footer: React.FC = () => {
         <p>&copy; {currentYear} Bradford Disability Football Club</p>
         <p>All Rights Reserved</p>
         <p>Registered Charity: 1158017</p>
+        <Link to="/trustees-portal">Trustees Portal</Link>
       </div>
 
     </footer>
