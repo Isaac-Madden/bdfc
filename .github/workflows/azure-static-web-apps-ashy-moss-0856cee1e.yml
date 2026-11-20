@@ -43,6 +43,7 @@ jobs:
           VITE_AZURE_ACCOUNT_NAME: ${{ secrets.VITE_AZURE_ACCOUNT_NAME }}
           VITE_AZURE_CONTAINER_NAME: ${{ secrets.VITE_AZURE_CONTAINER_NAME }}
           VITE_AZURE_SAS_TOKEN: ${{ secrets.VITE_AZURE_SAS_TOKEN }}
+          VITE_TRUSTEES_PASSCODE: ${{ secrets.VITE_TRUSTEES_PASSCODE }}
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
