@@ -23,6 +23,10 @@ const AdultsPage: React.FC = () => {
           We always travel by coach to the fixtures which is very popular with members, as it gives them a sense of independence.
           The fixtures are designed so that our players compete against teams of a similar ability from other clubs.
         </p>
+        <h3>11 Aside Inclusive Football League</h3>
+        <p>
+          We are a founding member of this newly formed inclusive league that was set up by Trevor Waddington at Pontefract and play monthly games home and away.
+        </p>
         <h3>BDFC Tournament</h3>
         <p>
           This is an annual event which we organise where over 50 other teams from all over the UK attend.
