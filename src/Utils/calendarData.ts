@@ -51,4 +51,15 @@ export const calendarData: MonthGroup[] = [
       { date: '11th', title: 'Christmas Party', location: 'The New Tyke, Thornton Rd, BD13 3DG', tag: 'Social' },
     ],
   },
+  {
+    month: 'January 2027',
+    events: [
+      { date: '17th', title: 'The Pantomime Adventures of Peter Pan', location: 'Alhambra Theatre Bradford', tag: 'Social' },
+    ],
+  },
+    {
+    month: 'July 2027',
+    events: [
+      { date: '11th', title: 'BDFC Annual Tournament', location: 'Wagon Lane, BD16 1LT', tag: 'Tournament', isHighlight: true },    ],
+  }
 ];

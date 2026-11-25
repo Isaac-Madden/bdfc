@@ -30,11 +30,11 @@ const TournamentPage: React.FC = () => {
             In the rare instance that a team fields players above their declared level, we reserve the right to overturn results or decline future invitations—something that has only been necessary on two occasions in ten years.
           </p>
           <p>
-            In 2026, we celebrate our 25th anniversary, and to mark this milestone, this year’s tournament promises to be extra special. 
+            In 2027, we celebrate our 26th anniversary, and to mark this milestone, this year’s tournament promises to be extra special. 
             We are delighted to be partnering with Aire Valley Disability Sports, and grateful to Bradford & Bingley Rugby Club for hosting the event at their outstanding facilities as part of their commitment to supporting disability sport. 
           </p>
           <p>
-            This year’s tournament will take place on Sunday 13th September. 
+            This year’s tournament will take place on Sunday 11th July. 
           </p>
           <p>
             <b>Don’t miss out! Register your club now by contacting us at <a href="mailto:bradforddisabilityfc@gmail.com"> bradforddisabilityfc@gmail.com</a></b>

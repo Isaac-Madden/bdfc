@@ -14,10 +14,9 @@ const SponsorsPage: React.FC = () => {
 
       <div className="sponsors-content">
         <div className="sponsors-info">
-          <p>
-            There are no paid staff at BDFC — everything we do is powered by volunteers giving their time, energy, and passion to make a difference. Our coaches are the only paid members, ensuring we deliver quality, safe sessions for everyone involved.
+            <p>
+              There are no paid volunteers at BDFC - everything we do is powered by volunteers giving their time, energy, and passion to make a difference. Our coaches are not volunteers, they are paid members of staff, ensuring we deliver quality, inclusive, safe football for all our members.
           </p>
-
           <p>
             Our running costs are around <strong>£50k per year</strong>, which we cover through donations, fundraising, and grants. We couldn’t do what we do without the incredible support of our community.
           </p>
